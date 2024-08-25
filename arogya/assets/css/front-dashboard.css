@@ -1,0 +1,149 @@
+#news-panel{
+	/*height: 335px;*/
+	overflow-y:scroll;
+}
+.backbg{
+  background-image: url(<?=base_url('assets/img/bg1.jpg');?>);
+  background-attachment: fixed;
+}
+.circle-tile {
+    margin-bottom: 15px;
+    text-align: center;
+}
+.circle-tile-heading {
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 100%;
+    color: #fff;
+    height: 80px;
+    margin: 0 auto -40px;
+    position: relative;
+    transition: all 0.3s ease-in-out 0s;
+    width: 80px;
+}
+
+.circle-tile:hover #head-tile{
+    -webkit-transform: scale(1.15);
+        -ms-transform: scale(1.15);
+        transform: scale(1.15);
+        transition: all 0.5s;
+}
+.circle-tile-heading .fa {
+    line-height: 80px;
+}
+.circle-tile-content {
+   	padding-top: 50px;
+}
+.circle-tile-number {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1;
+    padding: 5px 0 15px;
+}
+.circle-tile-description {
+    text-transform: uppercase;
+}
+.circle-tile-footer {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #fff;
+    display: block;
+    padding: 5px;
+    transition: all 0.3s ease-in-out 0s;
+}
+.circle-tile-footer:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    text-decoration: none;
+}
+.circle-tile-heading.dark-blue:hover {
+    background-color: #2E4154;
+}
+.circle-tile-heading.green:hover {
+    background-color: forestgreen;
+}
+.circle-tile-heading.orange:hover {
+    background-color: #DA8C10;
+}
+.circle-tile-heading.blue:hover {
+    background-color: #2473A6;
+}
+.circle-tile-heading.red:hover {
+    background-color: #CF4435;
+}
+.circle-tile-heading.purple:hover {
+    background-color: darkred;
+}
+.tile-img {
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.9);
+}
+.whatsapp{
+	background-color: #449D44;
+}
+.coral{
+	background-color: coral;
+}
+.dark-blue {
+    background-color: #34495E;
+}
+.mediumseagreen{
+    background-color: mediumseagreen;
+}
+.indianred{
+    background-color: indianred;
+}
+.lightseagreen {
+    background-color: lightseagreen;
+}
+.green {
+    background-color: forestgreen;
+}
+.blue {
+    background-color: #2980B9;
+}
+.orange {
+    background-color: #F39C12;
+}
+.red {
+    background-color: #E74C3C;
+}
+.purple {
+    background-color: darkred;
+}
+.dark-gray {
+    background-color: #7F8C8D;
+}
+.gray {
+    background-color: #95A5A6;
+}
+.light-gray {
+    background-color: #BDC3C7;
+}
+.yellow {
+    background-color: #F1C40F;
+}
+.text-dark-blue {
+    color: #fff;
+}
+.text-green {
+    color: #fff;
+}
+.text-blue {
+    color: #fff;
+}
+.text-orange {
+    color: #fff;
+}
+.text-red {
+    color: #fff;
+}
+.text-purple {
+    color: #fff;
+}
+.text-faded {
+    color: #fff;
+}
+.tile-head{
+	color: #fff;
+	margin-top: 10px;
+	margin-bottom: 15px;
+	font-weight: bold;
+}

@@ -1,0 +1,94 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Organization Chart Plugin</title>
+
+    <link rel="icon" type="image/x-icon" href="img/logo.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ol3/3.18.2/ol.css">
+    <link rel="stylesheet" href="css/jquery.orgchart.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style2.css">
+    
+
+</head>
+<body id="">
+  <p class="demo-heading">pan and zoom</p>
+  <div class="demo-container" id="pan-zoom"></div>
+  
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.rawgit.com/jakerella/jquery-mockjax/master/dist/jquery.mockjax.min.js"></script>
+    <!-- the following reference is specific for IE -->
+  <script type="text/javascript" src="https://cdn.rawgit.com/stefanpenner/es6-promise/master/dist/es6-promise.auto.min.js"></script>
+  <script type="text/javascript" src="https://cdn.rawgit.com/niklasvh/html2canvas/master/dist/html2canvas.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ol3/3.18.2/ol.js"></script>
+  <script type="text/javascript" src="js/jquery.orgchart.js"></script>
+  <script type="text/javascript">
+    (function($) {
+
+      $(function() {
+
+      var jsonDs = {
+        'name': 'Lao Lao',
+        'title': 'general manager',
+        'children': [
+          { 'name': 'Bo Miao', 'title': 'department manager' },
+          { 'name': 'Su Miao', 'title': 'department manager',
+            'children': [
+              { 'name': 'Tie Hua', 'title': 'senior engineer' },
+              { 'name': 'Hei Hei', 'title': 'senior engineer',
+                'children': [
+                  { 'name': 'Pang Pang', 'title': 'engineer' },
+                  { 'name': 'Xiang Xiang', 'title': 'UE engineer',
+                    'children': [
+                  { 'name': 'Pang Pang', 'title': 'engineer', 'title': 'engineer', 'title': 'engineer' },
+                  { 'name': 'Pang Pang', 'title': 'engineer', 'title': 'engineer', 'title': 'engineer' },
+                  { 'name': 'Pang Pang', 'title': 'engineer', 'title': 'engineer', 'title': 'engineer' },
+                  { 'name': 'Pang Pang', 'title': 'engineer', 'title': 'engineer', 'title': 'engineer' },
+                  { 'name': 'Pang Pang', 'title': 'engineer', 'title': 'engineer', 'this': 'engineer' },
+                  { 'name': 'Xiang Xiang', 'title': 'UE engineer' }
+                ]
+                 }
+                ]
+              }
+            ]
+          },
+          { 'name': 'Hong Miao', 'title': 'department manager' },
+          { 'name': 'Chun Miao', 'title': 'department manager' }
+        ]
+      };
+
+    
+      /*********************** pan and zoom **********************/
+      $('#pan-zoom').orgchart({
+        'data' : jsonDs,
+        'nodeContent': 'title',
+        'pan': true,
+        'zoom': true
+      });
+     
+     
+    /*********************** show/hide sibling nodes respectively **********************/
+    $('#toggle-sibs-resp').orgchart({
+      'data' : jsonDs,
+      'nodeContent': 'title',
+      'toggleSiblingsResp': true
+    });
+    /*********************** vertical-depth **********************/
+    
+    $('#vertical-depth').orgchart({
+      'data' : jsonDs6,
+      'nodeContent': 'title',
+      'verticalDepth': 3,
+      'depth': 4
+    });
+
+    });
+
+    })(jQuery);
+  </script>
+  </body>
+</html>
